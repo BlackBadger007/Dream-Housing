@@ -1,0 +1,88 @@
+/* src/CenteredCarousel.css */
+.carousel-container {
+    /* position: relative; */
+    /* width: 1500px; */
+    width: 100%;
+    height: 500px;
+    /* height: 400px; */
+     /* Adjust height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* background-color: white; */
+    /* margin: 0px 20px; */
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* width: 100%; */
+    width: 640px;
+    height: fit-content;
+  }
+  
+  .carousel-slide {
+    /* flex: 0 0 33.33%; */
+    /* Show 3 images at a time */
+    flex: 0 0 108.8%;
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* margin: 0px 14px; */
+    /* height: 100%; */
+  }
+  
+  .carousel-slide img {
+    /* width: 100%; */
+    /* height: 100%; */
+    width: 600px;
+    height: 400px;
+    /* object-fit: cover; */
+    /* border-radius: 10px; */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .carousel-slide.active img {
+    transform: scale(1.4); /* Scale up the center image */
+  }
+  
+  .carousel-slide.prev img,
+  .carousel-slide.next img {
+    transform: scale(0.9); /* Scale down the previous and next images */
+    opacity: 0.8;
+
+    /* height: 400px; */
+  }
+  
+  .carousel-dots {
+    position: absolute;
+    top: 640px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    /* background-color: rgb(32, 180, 106); */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* background-color: #EEE; */
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* background-color: rgb(32, 180, 106); */
+    background-color: #EEE;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    /* background-color: #ffffff; */
+    background-color: rgb(32, 180, 106);
+
+  }
+  
