@@ -153,14 +153,10 @@ function CreateListing(){
           return;
 
         }
-        // setLoading
 
-
-        
 
         const auth = getAuth()
         const bujo = auth.currentUser.uid
-        console.log(bujo)
 
         setLoading(true)
 
@@ -246,15 +242,11 @@ function CreateListing(){
 
 
         const docRef = await addDoc(collection(db, 'listings'),formDataCopy)
-        
-
-    // etc function.....
-    // navigate('/category/${formDataCopy.type}/${docRef.id')
+  
 
     setLoading(false)
     navigate('/profile')
 
-    // console.log(docRef)
 
     }
 
@@ -362,11 +354,9 @@ function CreateListing(){
 
             {geoLocationOn ? <>    
             <div className="cords">
-            {/* <h3>Latitude </h3> */}
             <label htmlFor="">Latitude </label>
             <input type="number" value={latitude} id='latitude' /><br />
             
-            {/* <h3 style={{marginBottom:"10px"}} >Longitude : {longitude}</h3> */}
             <label htmlFor="">Longitude </label>
             <input type="number" value={longitude} id='longitude' /><br />
               

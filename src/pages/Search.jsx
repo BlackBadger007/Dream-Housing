@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { collection, getDocs , query, where , or } from "firebase/firestore"
+import { collection, getDocs , query, where  } from "firebase/firestore"
 import { db } from "../firebase.config"
 import CategoryListing from "./CategoryListing"
 import { FaSearch } from "react-icons/fa"
@@ -9,7 +9,6 @@ function Search(){
 
     const [data , setData] = useState([])
     const [text , setText] = useState('')
-    const address = "34 street usa china los angeles"
     
     const onChange = async (e) => {
         setText(e.target.value)

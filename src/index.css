@@ -394,8 +394,6 @@ li:hover{
     width: 150px;
   }
   .buff{
-    /* width: fit-content;
-    margin: auto; */
       max-width: fit-content;
       margin: auto;
       margin-top:410px;
@@ -436,8 +434,6 @@ li:hover{
   
   .invisible form{
     height: fit-content;
-    /* margin: 0px 0px;
-    padding: 0px 0px; */
     transition: 7s;
   }
   .invisible button{
@@ -455,10 +451,7 @@ li:hover{
 
   .visible{
     width:fit-content;
-    /* max-width:fit-content; */
-    /* height: 200px; */
     height: fit-content;
-    /* background-color: rgb(32, 180, 106); */
     margin: 0px 10px;
     background-color: #EEE;
     margin: 20px 10px;
@@ -467,11 +460,8 @@ li:hover{
     
     
   }
-  /* .visible input{ */
   .visible textarea{
     width: 400px ;
-    /* overflow: auto; */
-    /* height: 200px; */
     margin: 10px 10px ;
     background-color: white;
     resize: vertical;
@@ -488,10 +478,8 @@ li:hover{
   }
   .visible button {
     width: 70px;
-    /* height: 0px; */
     padding: 5px 0px;
     margin-bottom: 10px;
-    /* margin-left: 330px; */
     color: white;
     font-weight: 500;
     font-size: 17px;
@@ -503,18 +491,12 @@ li:hover{
   .noti-sender{
     display: block;
     width: 80%;
-
-    /* justify-content: left; */
-
-  
   }
   
   .plane{
-    /* padding: 100px; */
     color: rgb(32, 180, 106);
   }
   .noti-sender h4{
-    /* width: 100%; */
     margin: 0px  0px;
     color:rgb(99, 99, 99) ;
     font-size: 15px;
@@ -527,14 +509,12 @@ li:hover{
   .big-clm{
     display: flex;
     flex-direction: column;
-    /* height: fit-content; */
   }
   .prop-view h3{
     padding: 0px 0px ;
     margin: 0px 0px;
     font-size: 20px;
     transition: 0.7s;
-    /* font-weight: 700; */
   }
   .prop-view h4{
     padding: 0px 0px ;
@@ -544,38 +524,27 @@ li:hover{
     transition: 0.7s;
 
   }
-  
-
- 
-
 
   .noti-card{
     width: 800px;
-    /* height:100px ; */
     margin: auto;
     background-color: white;
     border-radius: 0.5rem;
     margin-bottom: 15px;
     padding: 10px 10px;
-    /* height: fit-content; */
   }
   .noti-start{
     display:flex;
-    /* width: 80%; */
-    /* height: fit-content; */
     justify-content:space-between;
 
   }
   .noti-btns{
     display:flex;
     flex-direction: column;
-    /* position: relative; */
-    
     justify-content: space-between;
     width:20px;
     padding: 0px 0px;
     margin: 0px 10px;
-    /* font-size: 1px; */
     align-items: baseline;
   }
   .more{

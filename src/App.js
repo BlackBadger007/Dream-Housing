@@ -25,6 +25,7 @@ function App() {
       <Router>
       <Routes>
         <Route path='/' element={<Explore/>} />
+        
         <Route path='/forgot-password' element={<ForgotPassword/>} />
         <Route path='/offer' element={<Offer/>} />
 
@@ -49,16 +50,10 @@ function App() {
         </Route>
 
         <Route path='/sign-in' element={<SignIn/>} />
-        {/* <Route path='/search' element={<Search/>} /> */}
         <Route path='/sign-up' element={<SignUp/>} />
         <Route path='/category/:login' element={<Category/>} />
-        {/* <Route path='/createListing' element={<CreateListing/>} /> */}
-        {/* <Route path='/property/:productId' element={<Property/>} /> */}
-        {/* <Route path='/message/:receiver' element={<Message/>} /> */}
-
 
       </Routes>
-      {/* <Navbar/> */}
     </Router>
     </HousingProvider>
 

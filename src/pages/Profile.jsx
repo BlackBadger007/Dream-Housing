@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth , updateProfile , verifyBeforeUpdateEmail ,reauthenticateWithCredential } from "firebase/auth"
-import { collection, query, where, getDocs , doc , getDoc ,  updateDoc } from "firebase/firestore";
+import { getAuth , updateProfile ,reauthenticateWithCredential } from "firebase/auth"
+import { collection, query, where, getDocs , doc ,  updateDoc } from "firebase/firestore";
 import { getStorage, ref , uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { EmailAuthProvider } from "firebase/auth/web-extension";
 import { v4 as uuidv4} from 'uuid'
 import { db } from "../firebase.config";
 import { ToastContainer , toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css' 
-import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Buffer from "../components/Buffer";
 import CategoryListing from "./CategoryListing"
-import Google from "./Google";
 import { FaBell , FaArrowLeft } from "react-icons/fa6";
 
 
@@ -20,7 +18,6 @@ function Profile () {
 
   const navigate = useNavigate()
   const auth = getAuth()
-//   console.log(auth.currentUser)
 
   // store
   const [data , setData] = useState(null)
@@ -67,23 +64,7 @@ function Profile () {
                 })
             })
             setData(listing)
-
-            // const docRef = doc(db, "users", auth.currentUser.uid);
-            // const docSnap = await getDoc(docRef);
-    
-            // if (docSnap.exists()) {
-            //     // console.log("Document data:", docSnap.data());
-
-            //     setUser((prevState) => ({
-            //       ...prevState,
-            //       src: docSnap.data()
-            //     }))
-                
-                
-            // } else {
-            //     console.log("No such document!");
-            // }
-      
+   
             setLoading(false)
         }
 
@@ -91,9 +72,6 @@ function Profile () {
         
   },[])
 
-
-  // useEffect(() => {console.log(data)},[data])
-  // useEffect(() => {console.log(user)},[user])
 
   // EVENTS
     const onClick = () => {
@@ -118,8 +96,6 @@ function Profile () {
     }
 
     const update1 = async () => {
-
-        
 
         // UPLOAD NEW PROFILE
         const storeImage = async (image) =>{
@@ -280,15 +256,7 @@ function Profile () {
                         {!inputVisi ? <>
 
                             <button className="cng" style={{marginTop:'5px'}} onClick={change} >Edit</button>
-                            {/* <Popup trigger={<button className="cng" style={{marginTop:'5px'}} >Edit</button>} modal >
-                                <h3 style={{marginBottom:'15px', marginTop:'5px', fontSize:'19px' ,fontWeight:'700', textAlign:'center' }}  >Verify yourself</h3>
-                                <div className="tokas" style={{display:'flex'}} > 
-                                    <input type="password" onChange={setPassValue} placeholder="ENTER  PASSWORD" /> 
-                                    <button onClick={authenticateUser} className="cng" >Go</button>
-                                    <p>OR</p>
-                                    <Google/>
-                                </div>
-                            </Popup> */}
+                            
 
                         </> : <>
 
@@ -316,7 +284,6 @@ function Profile () {
                             
                                         </> : <>
                             
-                                            {/* <input type="file" style={{backgroundColor:'#EEE'}} id="images" onChange={onChange1} accept='.jpg,.png,.jpeg' required  /> */}
                                             <h4 style={{textAlign:'center'}} >Upload Pofile Pic</h4>
                             
                                         </> }
